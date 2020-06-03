@@ -1,4 +1,4 @@
-FROM centos:8.1.1911
+FROM centos:8.1.1911 AS build
 
 # Version Number of Suricata
 ENV VERSION="5.0.3"
@@ -85,7 +85,7 @@ RUN  cd /tmp/build && \
         ldconfig
 
 
-FROM centos:latest
+FROM centos:8.1.1911
 RUN  yum -y install epel-release dnf-plugins-core && \
 	yum config-manager --set-enabled PowerTools && \
         yum -y install GeoIP file libpcap htop net-tools vim libnet libtool libedit libarchive libmnl libmpc libnfnetlink libyaml lzo rsync libnetfilter_queue jansson tcpdump hiredis.x86_64 nss libmaxminddb-devel && \
