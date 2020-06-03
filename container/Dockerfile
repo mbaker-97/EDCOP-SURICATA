@@ -1,4 +1,4 @@
-FROM centos:latest AS build
+FROM centos:8.1.1911
 
 # Version Number of Suricata
 ENV VERSION="5.0.3"
