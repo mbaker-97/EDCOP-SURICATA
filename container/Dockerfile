@@ -116,7 +116,7 @@ RUN  chmod +x suricata-entrypoint.sh update-entrypoint.sh && \
 WORKDIR /var/lib/suricata/rules
 
 ENV  INTERFACE1=eth0 \
-        INTERFACE2=eth1
+        INTERFACE2=eth0
 # Should be set by Helm, do not change here
 ENV  CHART_PREFIX=suricata
 
