@@ -17,7 +17,7 @@ sed -i 's/${INTERFACE2}/'$INTERFACE2' /g' /etc/suricata/suricata.yaml
 
 #For standalone deployment
 sed -i 's/eth0/'$INTERFACE1' /g' /etc/suricata/suricata.yaml
-sed -i 's/$eth1/'$INTERFACE2' /g' /etc/suricata/suricata.yaml
+sed -i 's/eth1/'$INTERFACE2' /g' /etc/suricata/suricata.yaml
 
 # Start Suricata normally
 # Be sure to adjust interface 
